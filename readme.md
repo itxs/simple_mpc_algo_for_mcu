@@ -1,7 +1,16 @@
-## Basic MPC algorithm for using in embedded for optimal temperature control
+# Basic MPC Algorithm for Embedded Optimal Temperature Control
 
-Based on simple binary search algorithm and reduced SOPDT process model
-Need to be converted to C code before adding to firmware project
+This project provides a basic Model Predictive Control (MPC) algorithm designed for optimal temperature control in embedded systems. The algorithm employs a binary search technique and a simplified Second Order Plus Dead Time (SOPDT) process model, which effectively represents real thermal systems.
 
-The source code is a demo application to play with parameters:
+## Overview
+- **Algorithm**: Binary search-based MPC
+- **Model**: Reduced SOPDT (Second Order Plus Dead Time without ability to make ripples)
+- **Conversion**: Must be translated to C code for firmware integration
+
+## Model Calibration
+To calibrate the SOPDT model for a specific heater-media-sensor system, use a least squares method or a similar algorithm on the measured step response data of the real system.
+
+## Demo Application
+The source code includes a demo application to experiment with various parameters.
+
 ![Program screenshot](program.png)
